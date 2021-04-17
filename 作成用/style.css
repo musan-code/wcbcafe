@@ -1,0 +1,624 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html {
+	font-size: 100%;
+}
+
+body {
+	font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+/*	行の高さ指定*/
+	line-height: 1.7;
+	color: #432;
+}
+
+a {
+/*	aタグのリンクの下線消す*/
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+/*-----------
+headerエリア
+-----------*/
+#home {
+/*	ID属性を指定する場合は #をつける*/
+	background-image: url("../images/main-bg.jpg"),linear-gradient(#c9ffbf, #ffafbd);
+/*	background-blend-mode: luminosity;*/
+/*	背景にグラデーションをつける*/
+/*	background-image: linear-gradient(#c9ffbf, #ffafbd);*/
+/*	vh ビューポートの高さに対する割合 端末に応じて高さ指定*/
+	min-height: 100vh;
+/*	background-color: #0bd;*/
+}
+
+#home .page-title {
+	text-transform: none;
+}
+
+.wrapper {
+	max-width: 1100px;
+/*	中央配置*/
+	margin: 0 auto;
+/*スマホ用*/
+	padding: 0 4%;
+}
+
+.big-bgi {
+/*	画面の縦横比率を保ったまま画面いっぱいに広げる background-size: cover	*/
+	background-size: cover;
+/*背景画像の位置調整*/
+	background-position: center top;
+/*背景画像を一回だけ表示して繰り返さない*/
+	background-repeat: no-repeat;
+}
+
+.logo {
+/*	ロゴ画像の大きさ調整*/
+	width: 210px;
+	margin-top: 14px;
+}
+
+.header-page {
+/*	親要素に display: flexを指定して子要素を横並びにする*/
+	display: flex;
+/*間隔を均等に配置*/
+	justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.main-nav {
+/*	ナビゲーションを横並びに表示　display: flex*/
+	display: flex;
+	font-size: 1.25rem;
+	list-style: none;
+	margin-top: 34px;
+	text-transform: uppercase;
+}
+
+.main-nav li {
+/*	main-navクラスの li要素を指定 左側の余白をあける*/
+	margin-left: 36px;
+}
+
+.main-nav a {
+/*	main-nav aタグ　青色を#432に設定*/
+	color: #432;
+}
+
+.main-nav a:hover {
+/*	aタグにhoverしたときの色設定 #0bd*/
+	color: #0bd;
+}
+
+/*-----------
+contentエリア
+-----------*/
+.home-content {
+/*	文字中央寄せ*/
+	text-align: center;
+/*	余白の指定*/
+	margin-top: 10%;
+}
+
+.home-content p {
+	font-size: 1.125rem;
+	margin: 10px 0 42px;
+}
+
+.page-title {
+	font-size: 3rem;
+	font-family: 'Philosopher', serif;
+	text-transform: uppercase;
+	font-weight: normal;
+  margin-bottom: 30px;
+}
+
+input {
+	border: none;
+	outline: none;
+}
+
+textarea {
+	border: none;
+}
+
+.btn {
+	font-size: 1.375rem;
+	background-color: #0bd;
+	color: #FFF;
+/*	角丸の設定*/
+	border-radius: 10px;
+/*	内側の余白設定*/
+	padding: 18px 32px;
+}
+
+.btn:hover {
+	background-color: #FFF;
+  color: #0bd;
+  transition: 1.3s;
+}
+
+/*-----------
+newsエリア
+-----------*/
+#news {
+/*	ID属性 newsを指定*/
+	background-image: url("../images/news-bg.jpg");
+	height: 600px;
+/*	margin-bottom: 40px;*/
+}
+
+#news .page-title {
+/*	左右中央寄せ*/
+	text-align: center;
+}
+/*-----------
+contentエリア
+-----------*/
+artical {
+/*	幅を$指定することで画面幅が変わっても伸縮できるように設定*/
+	width: 74%;
+}
+
+aside {
+	width: 22%;
+}
+
+.news-content {
+/*	横並びに設定*/
+	display: flex;
+/*	均等に配置*/
+	justify-content: space-between;
+/*	外側余白設定*/
+	margin: 50px 0;
+}
+/*-----------
+content mainエリア
+-----------*/
+.post-info {
+/*	親要素土台配置*/
+	position: relative;
+	padding-top: 4px;
+	margin-bottom: 40px;
+}
+
+.post-date {
+	background: #0bd;
+/*	角丸*/
+	border-radius: 50%;
+	color: #FFF;
+	width: 90px;
+	height: 90px;
+	font-size: 1.2rem;
+	text-align: center;
+/*	子要素絶対配置*/
+	position: absolute;
+	top: 0;
+	padding-top: 10px;
+}
+
+.post-date span {
+	font-size: 1.2rem;
+/*	border-topプロパティで 2019の上に線を引く 0.5 不透明度の設定*/
+	border-top: 1px rgba(255, 255, 255, 0.5) solid;
+	padding-top: 6px;
+/*	ブロック要素に設定して枠いっぱいに広げる*/
+	display: block;
+	width: 60%;
+/*	左右中央よせ*/
+	margin: 0 auto;
+}
+
+.post-title {
+	font-family: YuMincho, 'Yu Mincho', 'Hiragino Mincho ProN', 'serif';
+	font-size: 2rem;
+	font-weight: normal;
+}
+
+.post-title,
+.post-cat {
+/*	post-titleとpost-catクラスを指定*/
+	margin-left: 120px;
+}
+
+article img {
+	margin-bottom: 20px;
+}
+article p {
+/*	文字の下に外側余白 1rem設定*/
+	margin-bottom: 1rem;
+}
+
+li {
+	list-style: none;
+}
+
+.sub-title {
+	font-size: 1.375rem;
+/*	padding: 0 8px 8px;*/
+/*	下線の設定*/
+	border-bottom: 2px #0bd solid;
+	font-weight: normal;
+  margin-bottom: 5px;
+  letter-spacing: 0.2rem;
+}
+
+.sub-menu {
+	margin-bottom: 60px;
+}
+
+.sub-menu li {
+	border-bottom: 1px #DDD solid;
+}
+
+.sub-menu a {
+	color: #432;
+/*	aタグにdisplay: blockで要素いっぱいに広げることで
+	クリックできる範囲が広がるように設定できるよ!*/
+	display: block;
+	padding: 10px 0;
+}
+
+.sub-menu a:hover {
+	color: #0bd;
+}
+
+/* サイドバー */
+aside {
+    width: 22%;
+}
+
+aside p {
+	padding: 12px 10px;
+}
+
+article  {
+	width: 74%;
+}
+/*-----------
+menu画面 menu.html
+-----------*/
+#menu {
+		background-image: url(../images/menu-bg.jpg);
+		min-height: 100vh;
+}
+
+.menu-content {
+		max-width: 560px;
+		margin-top: 10%;
+	}
+
+.menu-content p {
+	font-size: 1.125rem;
+	margin: 10px 0 0;
+}
+	
+	
+.menu-content .page-title {
+		text-align: center;
+	}
+/*-----------
+menu画面 画像 grid menu.html
+-----------*/
+.grid {
+	display: grid;
+/*	grid要素を 1:1:1の割合で横並びに設定 要素を繰り返し並べる repeat関数を適用
+	repeat(3, 1fr)  1frのボックスが1列に3つ並べることができる*/
+/*	auto-fit  画面の幅に合わせて要素を折り返して次に行に表示できる 240pxまで*/
+	grid-template-columns: repeat(auto-fit,minmax(240px, 1fr));
+/*	アイテム動詞の横方向と縦方向の間隔をまとめて指定する*/
+	gap: 26px;
+	margin: 80px 0 50px 0;
+}
+
+.big-box {
+/*	横の範囲を指定*/
+	grid-column: 1/3;
+/*  縦の範囲を指定*/
+	grid-row: 1/3;
+}
+
+.big-box {
+	width: 100%;
+	height: 93%;
+/*	画像の表示範囲をトリミングする object-fitプロパティを使う*/
+	object-fit: cover;
+}
+
+/*-----------
+contactエリア
+-----------*/
+#contact {
+	background-image: url("../images/contact-bg.jpg");
+/*	min-height  高さの最小値を指定*/
+	min-height: 100vh;
+}
+
+/*フォーム*/
+form div {
+	margin-bottom: 25px;
+}
+
+label {
+	font-size: 1.125rem;
+	margin-bottom: 10px;
+	display: block;
+}
+
+/*属性の指定*/
+input[type="text"],
+input[type="email"],
+textarea {
+	background: rgba(255,255,255,0.5);
+	border: 1px #FFF solid;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"] {
+	width: 100%;
+/*	240pxまで指定*/
+	max-width: 240px;
+	box-sizing: border-box;
+}
+
+textarea {
+	width: 100%;
+	max-width: 480px;
+	/*	右下の//消す*/
+	resize: none;
+	box-sizing: border-box;
+	height: 6rem;
+}
+
+#message {
+/*	height: 60px;*/
+}
+
+input[type="submit"] {
+	border: none;
+/*	カーソルを当てた時 pointerに表示できるように設定*/
+	cursor: pointer;
+/*	行間文字サイズに設定*/
+	line-height: 1;
+	margin-left: 16px;
+}
+
+/*-----------
+locationエリア
+-----------*/
+#location {
+	padding: 4% 0;
+}
+
+#location .wrapper {
+/*	親要素 display: flexで横並びに指定*/
+	display: flex;
+	justify-content: space-between;
+}
+
+.location-info {
+	width: 20%;
+}
+
+.location-info p {
+	padding: 12px 10px;
+}
+
+label {
+  margin-bottom: 10px;
+  font-size: 1.0rem;
+}
+
+/*iflame*/
+iframe {
+	width: 100%;
+}
+
+.location-map {
+	width: 74%;
+}
+
+/*-----------
+snsエリア
+-----------*/
+#sns {
+	background: #FAF7F0;
+	padding: 4% 0;
+}
+
+#sns .wrapper {
+/*	親要素横並びに設定 display: flex*/
+	display: flex;
+	justify-content: space-between;
+}
+
+.sub-title {
+	
+}
+
+#sns .sub-title {
+	margin-bottom: 30px;
+}
+
+.sns-box {
+	width: 30%;
+}
+/*-----------
+footerエリア
+-----------*/
+footer {
+	background: #432;
+	text-align: center;
+/*	内側余白設定*/
+	padding: 26px 0;
+}
+
+footer p  {
+	color: #FFF;
+	font-size: 0.875rem;
+}
+
+/*-----------
+レスポンシブ対応 600pxまで対応
+-----------*/
+@media screen and (max-width:600px){ 
+	
+	h1 {
+		color: #0bd;
+		margin: 0;
+	}
+	
+	.header-page {
+	/*	縦並びに設定*/
+		flex-direction: column;
+/*		要素を中央にまとめるプロパティ align-items: center;*/
+		align-items: center;
+	}
+
+	.logo {
+/*	ロゴ画像の大きさ調整*/
+	width: 210px;
+	margin-top: 14px;
+	}
+
+/*-----------
+home画面 index.html
+-----------*/
+	.page-title {
+		margin: 30px 0;
+		font-size: 2.5rem;
+    text-align: center;
+	}
+	
+	.main-nav {
+		margin-top: 10px;
+		font-size: 1rem;
+		padding: 10px;
+	}
+	
+	.main-nav li {
+		margin: 0 20px;
+	}
+	
+	.home-content {
+		margin-top: 20%;
+	}
+/*-----------
+news画面 news.html
+-----------*/
+	
+	#news .page-title {
+/*		ID属性new　page-titleを指定*/
+		margin-top: 30px;
+	}
+	.news-content {
+/*		news-contentエリアを縦並びに表示する  */
+		flex-direction: column;
+	}
+	
+	.post-info {
+		margin-bottom: 30px;
+	}
+	
+	.post-date {
+		width: 70px;
+		height: 70px;
+		font-size: 1rem;
+	}
+	
+	.post-date span {
+		font-size: 0.785rem;
+		padding-top: 5px;
+	}
+	
+	.post-title {
+		font-size: 1.375rem;
+	}
+	
+	.post-cat {
+		font-size: 0.875rem;
+		margin-top: 10px;
+	}
+	
+	.post-title,
+	.post-cat {
+		margin-left: 80px;	
+	}
+	
+	article, 
+	aside {
+		width: 100%;
+	}
+	
+	article {
+		width: 74%;
+	}
+	
+	aside {
+		margin-top: 60px;
+	}
+/*-----------
+menu画面 menu.html
+-----------*/
+	#menu {
+		background-image: url(../images/menu-bg.jpg);
+		min-height: 100vh;
+	}
+	
+	.menu-content {
+		margin-top: 20%;
+	}
+	
+	.big-box {
+		grid-column: auto;
+		grid-row: auto;
+	}
+	
+	.big-box img {
+/*		height: 100%;*/
+	}
+/*-----------
+contact画面 contact.html
+-----------*/
+/*	フォーム部分*/
+	input[type="text"],
+	input[type="email"] 
+	{
+		max-width: 100%;
+/*		max-width: 240px;*/
+		box-sizing: border-box;
+	}
+	
+	textarea {
+/*		max-width: 240px;*/
+		width: 100%;
+		box-sizing: border-box;
+	}
+/*-----------
+contact画面 店舗情報snsエリア
+-----------*/
+/*	店舗情報・地図 SNS*/
+	#location .wrapper,
+	#sns .wrapper {
+/*		要素を縦並びに表示する flex-derection: column*/
+		flex-direction: column;
+		
+	}
+	
+	.location-info,
+	.location-map,
+	.sns-box {
+		width: 100%;
+	}
+	
+	.sns-box {
+		margin-bottom: 30px;
+	}
+}
